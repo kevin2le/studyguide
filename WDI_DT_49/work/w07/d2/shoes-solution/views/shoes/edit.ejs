@@ -1,0 +1,19 @@
+<%- include('./../_partials/head') %>
+
+<h1>Edit Shoe</h1>
+
+<form action="/<%= shoe.id %>?_method=PUT" method="POST">
+  <label>Shoe Name</label>
+  <input type="text" name="shoeName" value="<%= shoe.name %>"><br>
+  <br>
+  <label>Shoe Release Year</label>
+  <input type="text" name="shoeReleaseYear" value="<%= shoe.year %>"><br>
+  <br>
+  <label>Shoe Description</label>
+  <input type="text" name="shoeDescription" value="<%= shoe.description %>"><br>
+  <br>
+  <input type="hidden" name="_method" value="put"/>
+  <button type="submit" name="shoeId" value="<%= shoe.id %>">Update</button>
+</form>
+
+<%- include('./../_partials/footer') %>

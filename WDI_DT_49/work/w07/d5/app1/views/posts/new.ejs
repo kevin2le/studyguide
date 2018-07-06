@@ -1,0 +1,31 @@
+<%- include('./../_partials/head') %>
+
+<h1>New Post</h1>
+
+<form method="POST" action="/posts">
+
+    <input type="hidden" name="userId" value="<%= id %>" /> 
+
+    <label for="title">Title:</label><br>
+    <input name="title"><br>
+
+    <br>
+
+    <label for="title">Content:</label><br>
+    <textarea name="content"></textarea><br>
+
+    <br>
+
+    <select name="category">
+        <option value="Nature">Nature</option>
+        <option value="Sports">Sports</option>
+        <option value="Inspirational">Inspirational</option>
+    </select>
+
+    <br>
+    <br>
+
+    <button>New Post</button>    
+</form>
+
+<%- include('./../_partials/footer') %>

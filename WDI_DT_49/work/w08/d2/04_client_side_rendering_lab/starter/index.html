@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Fancy App</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <!-- Source library scripts here (sometimes). -->
+  <script type="text/javascript" src="js/underscore.js"></script>
+  <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+</head>
+<body>
+
+<div class="content">
+  <header>
+    <nav class="bar">
+      <ul class="menu menu-left">
+        <li>Search</li>
+        <li>Home</li>
+        <li>Shop</li>
+        <li>Stores</li>
+      </ul>
+      <span>FANCY</span>
+      <ul class="menu menu-right">
+        <li>Join Fancy</li>
+        <li>Sign In</li>
+        <li>English</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="fancy-feed">
+    <h1>Welcome to Fancy!</h1>
+    <p>
+      Discover amazing stuff, collect the things you love,
+      buy it all in one place.
+    </p>
+  </main>
+</div>
+
+<!-- Define HTML templates here. -->
+<!--<script type="text/template" id="template">
+  <h1><%%= data.image %></h1>
+  <h1><%%= data.name %></h1>
+  <h1><%%= data.cost %></h1>
+  <h1><%%= data.user %></h1>
+  <h1><%%= data.likes %></h1>
+
+</script>-->
+<div id="productTarget">
+
+</div>
+
+<script type="text/template" id="productTemplate">
+<div>
+  <div><img src=".<%= image %>"</div>
+  <div><%= name %></div>
+  <div><%= cost %></div>
+  <div><%= user %></div>
+  <div><%= likes %></div>
+</div>
+</script>
+<!-- Source local scripts here. -->
+<script type="text/javascript" src="js/data.js">
+  // $template = document.querySelector('#template').innerHTML;
+  // var postTemplate = _.template($template);
+  // var postTemplateString = postTemplate({data: data});
+  // document.querySelector('#language').innerHTML= postTemplateString
+
+
+  
+</script>
+<script type="text/javascript" src="js/main.js">
+
+</script>
+
+</body>
+</html>

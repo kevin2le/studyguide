@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Recreating .ready()</title>
+	<style>
+		body {
+			margin: 0px;
+		}
+		.responsive {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Are you doing work when the document is ready?</h1>
+	<h3>Your wrapper should resolve before the huge image finishes loading. Turn on <a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/network-conditions">network throttling</a> to test.</h3>
+	<div class="completion">Wrapper hasn't resolved yet!</div>
+	<img class="responsive" src="https://www.w3schools.com/css/trolltunga.jpg">
+	<script>
+		function ready() {
+			 return new Promise(function(resolve, reject) {
+				 document.addEventListener('readystatechange', function() {
+	 				if (document.readyState === 'complete') {
+						console.log('Resolve is about to be called')
+						resolve();
+					}
+	 			});
+			});
+		};
+
+		ready().then(wrapperResolved)
+
+		function wrapperResolved() {
+			var completion = document.querySelector('.completion');
+			completion.innerHTML = "Resolved!";
+		};
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<%- include('./../_partials/head') %>
+
+
+<h1><%= user.name %>'s Posts</h1>
+
+<% user.posts.forEach(post => { %>
+    <div class="posts">
+        <h3><%= post.title %></h3>
+        <h4><%= post.category %></h4>
+        <form action="/users/<%= user._id %>/posts/<%= post._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+        <a href="/users/<%= user._id %>/posts/<%= post._id %>">Show Post</a>
+    </div>
+<% }); %>
+
+<a href="/users/<%= user._id %>/posts/new">New Post</a>
+
+
+<%- include('./../_partials/footer') %>

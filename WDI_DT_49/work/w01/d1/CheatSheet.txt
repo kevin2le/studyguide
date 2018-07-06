@@ -1,0 +1,6 @@
+Bash Terminal CheatSheet
+
+Navigating through the Weeds
+
+** mkdir ** 
+
